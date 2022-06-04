@@ -101,7 +101,7 @@
     "workbox-webpack-plugin": "5.1.4"
   },
   "scripts": {
-    "start": "yarn neon && concurrently -k \"cross-env NODE_ENV=production BROWSER=none yarn react-start\" \"wait-on http://localhost:3000 && electronmon .\"",
+    "start": "yarn neon && concurrently -k \"cross-env NODE_ENV=production BROWSER=none yarn react-start\" \"wait-on http://localhost:3000 && electronmon --no-sandbox .\"",
     "build": "yarn neon && node scripts/build.js",
     "test": "node scripts/test.js",
     "dist:win": "yarn build && electron-builder -w -c.extraMetadata.main=build/electron.js --publish never",

@@ -10,7 +10,7 @@ Zecwallet Lite is zaddr-first, Sapling-compatible lightwallet client for Zcash. 
 * When we make a release version we will include instructions for download.
 * Until that time, please only use if you know specifically what you are doing!!
 
-## Privacy 
+## Privacy
 * While all the keys and transaction detection happens on the client, the server can learn which blocks contain your shielded transactions.
 * The server also learns other metadata, including your IP address.
 * Finally, note that taddr doesn't provide privacy on-chain.
@@ -42,17 +42,38 @@ cd zecwallet-lite
 yarn install
 yarn build
 ```
+
 The following instructions are tested on Arch Linux:
+
 ```
 yarn start
 ```
+
 You should see `Starting the development server...`
 and then `Compiled successfully!` printed out in this terminal.
 
 Then, in another terminal instance, run
+
 ```
 electron .
 ```
+
 Two windows should open, one for the app and one for debugging.
 
-_PS: Zecwallet-Lite is NOT an official wallet, and is not affiliated with the Electric Coin Company in any way._
+### Troubleshooting
+
+When running `yarn start` in container:
+
+```
+[69610:0604/063542.193055:FATAL:setuid_sandbox_host.cc(158)] The SUID sandbox helper binary was found, but is not configured correctly. Rather than run without sandboxing I'm aborting now. You need to make sure that /workspaces/free2z/zingolabs/zecwallet-lite/node_modules/electron/dist/chrome-sandbox is owned by root and has mode 4755.
+```
+
+This can be solved:
+
+```
+sudo chown root:root node_modules/electron/dist/chrome-sandbox
+sudo chmod 4755 node_modules/electron/dist/chrome-sandbox
+```
+
+> :alert: Zecwallet-Lite is NOT an official wallet
+> and is not affiliated with the Electric Coin Company in any way.
