@@ -2732,7 +2732,7 @@ dependencies = [
 [[package]]
 name = "zecwalletlitelib"
 version = "0.1.0"
-source = "git+https://github.com/zingolabs/zecwalletlitelib?branch=master#1d6d50ced88ec62db62a8baf05397be0e7700cf6"
+source = "git+https://github.com/zingolabs/zecwalletlitelib?branch=main#1d6d50ced88ec62db62a8baf05397be0e7700cf6"
 dependencies = [
  "arr_macro",
  "base58",

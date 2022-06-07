@@ -15,5 +15,5 @@ default-features = false
 features = ["napi-6"]
 
 [dependencies]
-zecwalletlitelib = { git = "https://github.com/zingolabs/zecwalletlitelib", branch = "master" }
+zecwalletlitelib = { git = "https://github.com/zingolabs/zecwalletlitelib", branch = "main" }
 lazy_static = "1.4.0"
